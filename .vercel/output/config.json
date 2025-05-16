@@ -1,8 +1,17 @@
 {
-  "version": 3,
+  "builds": [
+    {
+      "src": "Testing_project/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
+    }
+  ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "static/$1" },
+    { "src": "/static/(.*)", "dest": "staticfiles/$1" },
     { "src": "/media/(.*)", "dest": "media/$1" },
-    { "src": "/(.*)", "dest": "Testing_project/wsgi.py" }
+    { "src": "/(.*)", "dest": "Testing_project/index.py" }
   ]
 }
