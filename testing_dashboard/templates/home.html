@@ -1,0 +1,488 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Green Earth Sustainable Solution</title>
+	<link rel="stylesheet" href="{% static 'css/GE_foundation.css' %}">
+	<link rel="stylesheet" href="{% static 'css/GE_app.css' %}">
+	
+
+</head>
+
+<body>
+	<div class="off-canvas-absolute position-left report-export" id="offCanvas" data-off-canvas
+		data-transition="overlap">
+		<form action='' id="report_form">
+			<div class="grid-container">
+				<div class="grid-x small-up-1">
+					<div class="cell">
+						<p class="h5">Create Report</p>
+					</div>
+					<div class="cell">
+						<label>Report Name
+							<input type="text" id="report_name" name="report_name" placeholder="Report Name" required>
+						</label>
+					</div>
+
+					<div class="cell">
+						<label>Client Name
+							<input type="text" id="client_name" name="client_name" value="Cepheid" disabled>
+						</label>
+					</div>
+
+					<div class="cell">
+						<label>Location <select id="rep_Location_id" class="select" name="rep_Location_id" required>
+						</label> </select>
+					</div>
+
+					<div class="cell">
+						<ul class="accordion" data-accordion data-allow-all-closed="true">
+							<li class="accordion-item" data-accordion-item>
+								<a href="#" class="accordion-title" id="commodity_name"
+									name="commodity_name"><label>Commodities</label></a>
+								<div class="accordion-content" data-tab-content>
+									<div class="grid-x small-up-1" id="commodity-container">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="cell">
+						<div class="switch small">
+							<input class="switch-input" id="yes_no" type="checkbox" name="exampleSwitch">
+							<label class="switch-paddle" for="yes-no">
+								<span class="switch-active" aria-hidden="true">lbs.</span>
+								<span class="switch-inactive" aria-hidden="true">tns.</span>
+							</label>
+						</div>
+					</div> -->
+
+					<div class="cell">
+						<input id="automate_report" type="checkbox" checked><label for="checkbox1">Default</label>
+					</div>
+
+					<div class="cell">
+						<label>Report Type <select id="Report_Type" class="select" name="Report_Type">
+								<option value="Daily">Daily</option>
+								<option value="Weekly">Weekly</option>
+								<option value="Monthly">Monthly</option>
+							</select> </label> </div>
+
+					<div class="cell report_daterange">
+						<p> Date Range: <span id="report_daterange"></span></p>
+
+					</div>
+
+					<div class="cell Report_Length">
+						<label>Report Length <span id="report_len"></span><select id="Report_Length" class="select"
+								name="Report_Length">
+							</select> </label> </div>
+
+
+					<div class="cell Report_Length">
+						<label>Report frequency <span id="frequency"></span><select id="Report_frequency" class="select"
+								name="Report_frequency">
+							</select> </label> </div>
+
+
+					<div class="cell report_delivery_time">
+						<label>Report Delivery Time <input type="time" id="report_delivery_time"
+								name="report_delivery_time">
+						</label> </div>
+
+
+					<div class="cell">
+						<ul class="accordion" data-accordion data-allow-all-closed="true">
+							<li class="accordion-item" data-accordion-item>
+								<a href="#" class="accordion-title" id="mail_name"
+									name="mail_name"><label>Recipients</label></a>
+								<div class="accordion-content" data-tab-content>
+									<div class="grid-x small-up-1" id="mail-container">
+										<div class="cell">
+											<input id="checkbox-all" type="checkbox">
+											<label for="checkbox-all">All</label>
+										</div>
+
+										<div class="cell">
+											<input name="mail_name" class="mail-checkbox" type="checkbox"
+												value="lakshmi.m@progressive-solution.com">
+											<label for="checkbox-all">lakshmi.m@progressive-solution.com</label>
+										</div>
+
+										<!-- <div class="cell">
+											<input name="mail_name" class="mail-checkbox" type="checkbox"
+												value="lakshmimohan2998@gmail.com">
+											<label for="checkbox-all">lakshmimohan2998@gmail.com</label>
+										</div> -->
+
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="cell"> <input type="submit" class="button expanded" id="report_export_btn"
+							value="Exported"></input>
+						<p type="reset" class="text-center"><a href="#">Clear</a></p>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+	<div class="off-canvas-content" data-off-canvas-content>
+		<div class="side-nav">
+			<ul class="vertical menu">
+				<div id="clientNav">
+					<li><a class="gearthinc"></a></li>
+
+					<li><a href="C9E7P1H4d6" class="home active"> <span class="fi-home"></span> </a> </li>
+				</div>
+
+				<div class="">
+					<li><a id="monthly_report" class="home"><span class="fi-clipboard-notes"></span> </a>
+					</li>
+				</div>
+
+				<div class="report" style="display: none;">
+					<li><a id="report" class="home"><span class="fi-clipboard"></span> </a>
+					</li>
+				</div>
+
+			</ul>
+		</div>
+		<div class="side-info">
+			<div class="grid-x small-up-1">
+				<div class="cell text-center">
+					<img src="{% static 'image/logo.cepheid.png' %}" class="customer-logo">
+
+				</div>
+				<div class="cell">
+					<ul class="vertical menu accordion-menu" data-accordion-menu>
+						<li role="none"><a href="#" role="menuitem" class="back_btn" style="display: none;">← Back</a></li>
+						<li class="location_names">
+							<a href="#"> <span id="dashboard_names"></span></a>
+							<ul class="menu vertical nested" id="location_names">
+							</ul>
+						</li>
+						<li class="building_names" style="display: none;">
+							<a href="#"><span id="dashboard_building"></span></a>
+							<ul class="menu vertical nested" id="building_names"></ul>
+							
+						</li>
+
+						<li class="audit_report_links" style="margin-top: 1rem;display: none;">
+							<a href="#" role="menuitem">Audits</a>
+							<ul class="menu vertical nested" id="auidt_reports"></ul>
+						</li>
+
+
+						<li class="help">
+							<small>Version: <span id="last_version">V1.11 (Live)</span></small><br>
+							<small>Last Updated: <span id="last_dply_updateds">04-10-2025</span></small><br>
+							<small>Last Data Import: <span id="last_updated"></span></small>
+
+							<div class="callout">
+								<div class="grid-x">
+									<div class="cell">
+										<p class="h5">Questions?</p>
+										<p>Feel free to contact us!</p>
+										<a href="#!"><i class="fi-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="grid-container outer">
+			<div class="grid-x">
+
+				<div class="cell small-12">
+					<div class="grid-container" style="padding-left: 0px; padding-right: 0px;">
+						<div class="top-bar" id="responsive-menu">
+							<div class="top-bar-left">
+								<ul class="dropdown menu" data-dropdown-menu>
+									<ul class="menu sub">
+										<li> <button id="print-btn" class="button secondary"
+												onclick="window.print()">Print</button> </li>
+										<li class="category"> <label> <select>
+													<option value="">Recycling/Trash</option>
+													<option value="">C02</option>
+													<option value="">Energy</option>
+													<option value="">Hazardous Waste</option>
+													<option value="">Water</option>
+												</select> </li>
+
+										<li class=""> <label> <select class="year_category">
+													<option value=2024>2024</option>
+													<option value=2025>2025</option>
+												</select> </li>
+
+									</ul>
+								</ul>
+							</div>
+							<div class="top-bar-right">
+								<ul class="menu">
+
+									<!-- <li>Hello, Roger</li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="grid-container">
+						<div class="grid-x">
+							<div class="cell large-12">
+								<div class="callout dashboard-filter">
+									<div class="grid-x">
+										<div class="cell medium-8">
+											<ul class="menu">
+												<li>
+													<h4 id="headings"></h4>
+												</li>
+
+											</ul>
+										</div>
+										<div class="cell medium-4">
+											<ul class="menu align-right">
+												<li>
+													<div class="grid-x small-up-1 text-right">
+														<div class="cell">
+															<span class="subtitle">Weight Type</span>
+														</div>
+														<div class="cell">
+															<div class="switch small">
+																<input class="switch-input" id="yes-no" type="checkbox"
+																	name="exampleSwitch">
+																<label class="switch-paddle" for="yes-no">
+																	<!-- <span class="show-for-sr">Do you like me?</span> -->
+																	<span class="switch-active"
+																		aria-hidden="true">lbs.</span>
+																	<span class="switch-inactive"
+																		aria-hidden="true">tns.</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="cell medium-4">
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="grid-container">
+						<div class="grid-x grid-margin-x">
+							<div class="cell large-8">
+								<div class="grid-x grid-margin-x" data-equalizer data-equalize-on="medium" id="test-eq">
+									<div class="cell large-5">
+										<div class="callout diversion-percentage" data-equalizer-watch>
+											<p class="title"><span class="currentyear"></span>Diversion Percentage</p>
+											<p id="" class="h3"></p>
+											<div class="halfdoughnut">
+												<canvas id='diversionPercentage' style="height: 105px;"></canvas>
+
+											</div>
+											{% comment %} <div class="text-center" style="margin-top: 10px;">
+												<span id="last_month"></span>
+											</div> {% endcomment %}
+
+											<small class="note text-white" style="text-align:center">*<small class="zero_waste_diversion" style="display: none;"></small>Excludes waste not managed by Green Earth.</small>
+
+										</div>
+									</div>
+									<div class="cell large-7">
+										<div class="callout overview-data" data-equalizer-watch>
+											<div class="grid-x">
+												<div class="cell large-12">
+													<p class="title"><span class="currentyear">2024</span>Year to Date
+														Overview</p>
+													<div class="grid-x grid-margin-x large-up-2">
+
+														<!-- <div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Cost Avoidance<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="cost_avoidance" class="h5 cost">0</p>
+															</div>
+														</div> -->
+
+														<div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Cost Savings<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="cost_savings" class="h5 cost">0</p>
+															</div>
+														</div>
+
+														<div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Total Weight<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="overview_Totalweight" class="h5">0</p>
+															</div>
+														</div>
+
+
+
+														<div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Recycling Pickups<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="RecylePickups" class="h5 costs">0</p>
+															</div>
+														</div>
+
+														<div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Service Pickups<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="service_pickups" class="h5 costs">0</p>
+															</div>
+														</div>
+
+														<div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Commodities Count<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="commoditiesCount" class="h5 costs">0</p>
+															</div>
+														</div>
+
+
+														<!-- <div class="cell">
+															<div class="key-data">
+																<p class="subtitle">Total Pickups<span
+																		class="tooltipx info" data-tooltip tabindex="1"
+																		title="Your commodity diversion rate represents the amount of materials diverted from landfill."><i
+																			class="fi-info"></i></span></p>
+																<p id="total_pickups" class="h5">0</p>
+															</div>
+														</div> -->
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="grid-x">
+									<div class="cell large-12">
+										<div class="callout data-overview">
+											<div class="grid-x">
+												<div class="cell large-12" id="">
+													<div id="ILIcosts" class="data-breakdown">
+														<div class="grid-x grid-margin-x">
+															<div class="cell large-7">
+																<p class="title"><span
+																		class="currentyear">2024</span>Month to Month
+																	Commodities</p>
+															</div>
+															<div class="cell large-5">
+																<label>
+																	<select class="small" id="chart_commodity">
+																	</select>
+																</label>
+															</div>
+														</div>
+														<div class="grid-x">
+															<div class="cell large-12">
+																<div id="barchart_example-tabs-container">
+																</div>
+															</div>
+														</div>
+														<!-- cellend -->
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="cell large-4">
+								<div class="callout master-commodities">
+									<div class="grid-x">
+										<div class="cell large-12">
+											<div class="grid-x">
+												<div class="cell large-7">
+													<p class="title">Commodities</p>
+												</div>
+												<div class="cell large-5">
+													<label>
+														<select class="small" id="dropdown">
+															<option value="allCommodities">All Commodities</option>
+															<!-- <option value="costAvoidance">Cost Avoidance</option> -->
+															<option value="costSavings">Cost Savings</option>
+															<!-- <option value="companyRevenue">Revenue</option> -->
+														</select>
+													</label>
+												</div>
+											</div>
+
+											<ul class="menu sub-menu">
+												<li><a id="sortByWeight">Weight</a></li>
+												<li><a id="sortByAlphabet">Alphabetical</a></li>
+												<li class="final-destination"><input id="checkbox3"
+														type="checkbox"><small for="checkbox3">Show Destination</small>
+												</li>
+											</ul>
+
+											<table style="margin-top: 1rem;" id="commodity_table">
+												<thead>
+													<tr>
+														<th width="200">Commodities</th>
+														<th>Total Weight</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+<script>
+	const staticBaseUrl = "{% static 'assets/icons/' %}";
+</script>
+
+
+</html>

@@ -1,0 +1,1160 @@
+.text-white {
+	color: white;
+}
+
+.button {
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 3px;
+}
+
+.button.search {
+	border-radius: 0 3px 3px 0;
+}
+
+body.full {
+	margin-left: 1rem;
+}
+
+.grid-center {
+	margin: 0px auto !important;
+}
+
+.cost:before {
+	content: "$";
+}
+
+.percentage:after {
+	content: "%"
+}
+
+.input-group .button {
+	font-size: 11px !important;
+	margin-left: -2rem;
+	border-radius: 0px 3px 3px 0px !important;
+}
+
+.tooltipx.info {
+	display: inline-block !important;
+	font-size: 13px;
+	padding-left: 3px;
+	margin-left: 3px;
+}
+
+.tooltipx.info i {
+	color: #1779ba;
+}
+
+.reveal .h3 {
+	margin-bottom: 3rem;
+}
+
+.menu.callout-filter li select {
+	font-size: 11px;
+	margin-top: 6px;
+	margin-left: 7px;
+	height: 25px !important;
+}
+
+.off-canvas-absolute {
+	padding: 1.5rem 10px 0 10px;
+}
+
+.off-canvas-absolute .accordion {
+	background: none;
+}
+
+.off-canvas-absolute .accordion-title {
+	background: none !important;
+	padding: 0px;
+}
+
+.off-canvas-absolute .accordion-title:before {
+	font-size: 1rem;
+	right: 7px;
+}
+
+.off-canvas-absolute .accordion-content {
+	padding: 10px 10px 0;
+	border-radius: 7px !important;
+}
+
+.off-canvas-absolute .accordion-content .cell label {
+	position: absolute;
+	margin-top: 2.7px;
+}
+
+.sub-container {
+	max-width: 70%;
+	margin: 0px auto;
+}
+
+label small {
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-transform: none !important;
+	line-height: 15px;
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+
+#addClient .thumbnail.logo {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 8rem;
+}
+
+body {
+	position: relative;
+	background: #eee;
+	margin: 0px auto;
+	max-width: 1500px;
+	height: 100vh;
+}
+
+.off-canvas-content {
+	position: relative;
+	margin: 0px auto;
+	max-width: 1700px;
+}
+
+.side-nav {
+	position: fixed;
+	background: white;
+	top: 0%;
+	width: 3.5rem;
+	height: 100%;
+	border-right: 1px solid #eee;
+	z-index: 1;
+}
+
+.side-nav .gearthinc {
+	background: url(../assets/logo-mark.png) no-repeat center;
+	background-size: 2rem;
+	;
+	margin-bottom: 7rem;
+	height: 3rem;
+}
+
+.side-nav a {
+	height: 3em;
+}
+
+.side-nav .active {
+	position: relative;
+	background: rgb(75, 142, 197);
+	background: linear-gradient(90deg, rgba(75, 142, 197, 1) 0%, rgba(124, 202, 109, 1) 100%);
+	width: -webkit-fill-available;
+}
+
+.side-nav a span {
+	color: #767676;
+	font-size: 1.5rem;
+	margin-left: 4px;
+}
+
+.side-nav .active span {
+	color: white;
+}
+
+.side-info {
+	position: fixed;
+	background: white;
+	padding: 1rem 0rem;
+	margin-left: 3.5rem;
+	height: 100%;
+	width: 14rem;
+}
+
+.side-info .customer-logo {
+	padding: 0px;
+	margin-bottom: 3rem;
+	width: 7rem;
+}
+
+.side-info .accordion-menu a {
+	font-size: 13px;
+}
+
+.side-info .accordion-menu .tba:before {
+	content: "TBA";
+	position: absolute;
+	display: inline-block;
+	font-size: 9px;
+	background: #ddd;
+	color: #666;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 2px 7px 2px;
+	border-radius: 3px;
+	left: 1rem;
+	top: 10px;
+}
+
+.side-info .accordion-menu .tba a {
+	color: #333;
+	padding-top: 2.3rem;
+	cursor: not-allowed;
+	opacity: 0.4;
+	text-decoration: none;
+}
+
+.side-info .accordion-menu .is-accordion-submenu-parent {
+	border-bottom: 1px solid #eee;
+}
+
+.side-info .accordion-menu .help {
+	margin-top: 70%;
+	padding: 1rem;
+}
+
+.side-info .accordion-menu .help_nefab {
+	margin-top: 8%;
+	padding: 1rem;
+}
+
+.side-info .accordion-menu .help .callout {
+	background: #5FCF5E url(../assets/bg-topography-small.png) no-repeat center;
+	background-size: cover;
+	padding: 1rem;
+}
+
+.side-info .accordion-menu .help .callout p {
+	color: white;
+	font-weight: bold;
+}
+
+.side-info .accordion-menu .help .callout a {
+	padding: 0;
+}
+
+.side-info .accordion-menu .help .callout i {
+	color: white;
+	font-size: 11px;
+	padding: 5px 7px 4px 8px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+
+
+.side-info .accordion-menu .help_nefab .callout {
+	background: #5FCF5E url(../assets/bg-topography-small.png) no-repeat center;
+	background-size: cover;
+	padding: 1rem;
+}
+
+.side-info .accordion-menu .help_nefab .callout p {
+	color: white;
+	font-weight: bold;
+}
+
+.side-info .accordion-menu .help_nefab .callout a {
+	padding: 0;
+}
+
+.side-info .accordion-menu .help_nefab .callout i {
+	color: white;
+	font-size: 11px;
+	padding: 5px 7px 4px 8px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+
+.top-bar {
+	background: none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.top-bar .menu-text {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin-top: 11px;
+	margin-right: 1rem;
+	height: 3rem;
+	width: 7rem;
+}
+
+.top-bar li {
+	font-size: 11px;
+}
+
+.top-bar div ul {
+	background: none !important;
+}
+
+.top-bar a {
+	font-size: 13px;
+}
+
+.top-bar ul.menu.sub li {
+	padding-top: 1.1rem;
+	margin-right: 1rem;
+}
+
+.top-bar ul.menu.sub li input {
+	font-size: 13px;
+}
+
+.top-bar ul.menu.sub li select {
+	font-size: 13px;
+	padding-top: 3px;
+}
+
+.top-bar .mobile-menu li:first-child a {
+	padding-left: 0px;
+}
+
+.top-bar ul.menu .is-dropdown-submenu {
+	background: white !important;
+	border-radius: 5px;
+	border: 1px solid #eee;
+}
+
+.top-bar ul.menu .is-dropdown-submenu a {
+	padding: 10px;
+}
+
+.top-bar .top-bar-right .welcome:before {
+	content: "Hello, "
+}
+
+.callout.dashboard-filter {
+	background: none;
+	padding: 0px;
+	box-shadow: none;
+}
+
+.callout.dashboard-filter .grid-x .cell:first-child .menu {
+	padding-top: 1rem;
+}
+
+.callout.dashboard-filter .grid-x .cell:first-child .menu li {
+	margin-right: 1rem;
+}
+
+.callout.dashboard-filter .grid-x .cell:first-child .menu li span {
+	display: block;
+	font-size: 13px;
+	margin-top: 13px;
+}
+
+.callout.dashboard-filter .grid-x .cell:first-child .menu li .label {
+	margin-top: 10px;
+}
+
+.callout.dashboard-filter h4 {
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.callout.dashboard-filter .switch {
+	margin-bottom: 0px;
+}
+
+.callout.dashboard-filter .button-group {
+	margin-top: 1rem;
+	margin-bottom: 0px;
+}
+
+.callout.dashboard-filter .menu.alpha {
+	margin-top: 1rem;
+}
+
+.callout.dashboard-filter .menu.alpha a {
+	font-size: 10px;
+	font-weight: bold;
+	padding: 7px 1rem;
+}
+
+.callout .sub-menu .final-destination {
+	padding-top: 13px;
+}
+
+.callout .sub-menu .final-destination input {
+	position: relative;
+	top: 1px;
+}
+
+.callout .sub-menu .final-destination small {
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-left: 5px;
+}
+
+.callout .final-destination td:first-child {
+	position: relative;
+	padding-left: 2rem;
+}
+
+.callout .final-destination td:first-child:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background: #408F82;
+	margin-left: -10px;
+	width: 3px;
+	height: 19px;
+}
+
+.callout.dashboard-filter .menu.alpha a.active {
+	background: #ddd;
+	border-radius: 10px;
+}
+
+.callout {
+	border: none;
+	border-radius: 10px;
+	/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+.callout .title {
+	position: relative;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.callout .title span {
+	display: block;
+	font-size: 1rem;
+	color: #5FCF5E;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.callout .title:after {
+	content: "";
+	position: absolute;
+	background: rgb(75, 142, 197);
+	background: linear-gradient(90deg, rgba(75, 142, 197, 1) 0%, rgba(124, 202, 109, 1) 100%);
+	width: 1.5rem;
+	height: 3px;
+	left: 0px;
+	bottom: -3px;
+	border-radius: 10px;
+}
+
+.callout .subtitle {
+	color: #9DA8BA;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+}
+
+.callout .h3 {
+	color: #5FCF5E;
+	font-weight: bold;
+}
+
+.callout select.small {
+	font-size: 11px;
+	margin-top: 6px;
+	margin-left: 7px;
+	height: 25px !important;
+}
+
+.callout .label {
+	margin-right: 5px;
+	border-radius: 5px;
+}
+
+.callout .previous-month {
+	position: absolute;
+	width: 100%;
+}
+
+.callout .previous-month .label {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.callout .increase {
+	background: #D7F1ED;
+	color: #408F82 !important;
+}
+
+.callout .decrease {
+	background: #F4D7DB;
+	color: #C3253C !important;
+}
+
+.callout .label i {
+	margin-right: 5px;
+}
+
+.callout .h5 {
+	color: #5FCF5E;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.callout .def {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 17px;
+}
+
+.grid-container.outer {
+	max-width: 100%;
+	padding-right: 0px;
+	margin: 0px auto 0px 17.5rem;
+}
+
+.grid-container.outer.admin {
+	margin: 0px auto !important;
+}
+
+.grid-container.outer.admin .grid-container {
+	max-width: 80rem !important;
+}
+
+.data-info p {
+	font-size: 13px;
+	margin: 0px;
+}
+
+.diversion-percentage img {
+	display: block;
+	max-width: 8rem;
+	margin: 0px auto 1rem;
+}
+
+.diversion-percentage {
+	background: rgb(75, 142, 197);
+	background: linear-gradient(90deg, rgba(75, 142, 197, 1) 0%, rgba(124, 202, 109, 1) 100%);
+}
+
+.diversion-percentage:before {
+	content: "";
+	position: absolute;
+	background: url(../assets/icons/icon-diversion-percentage.png) no-repeat 0 0;
+	background-size: 2rem;
+	width: 2rem;
+	height: 2rem;
+	right: 1rem;
+}
+
+.diversion-percentage p {
+	color: white;
+}
+
+.diversion-percentage .h3 {
+	color: white;
+}
+
+.diversion-percentage .sub-title {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+.diversion-percentage.callout .title:after {
+	background: white !important;
+}
+
+.diversion-percentage.callout span {
+	color: white;
+}
+
+
+
+.diversion-percentage.callout small.note {
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 15px;
+	margin-top: 2rem;
+}
+
+
+.overview-data:before {
+	content: "";
+	position: absolute;
+	background: url(../assets/icons/icon-overview.png) no-repeat 0 0;
+	background-size: 2rem;
+	width: 2rem;
+	height: 2rem;
+	right: 1rem;
+}
+
+.callout.overview-data .key-data {
+	margin-bottom: 1.5rem;
+}
+
+.callout.overview-data .large-up-2 .cell:nth-child(2n+1) .key-data {
+	border-right: 1px solid #eee;
+}
+
+table i {
+	font-size: 1rem;
+}
+
+table .fi-x {
+	color: red;
+	font-size: 13px;
+}
+
+table input {
+	font-size: 11px !important;
+	margin: 0px !important;
+	height: 1.5rem !important;
+}
+
+table select {
+	margin: 0px !important;
+}
+
+table th {
+	font-size: 7.8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 5px;
+}
+
+table tr th:last-child {
+	text-align: right;
+}
+
+table tr:first-child th input {
+	height: 10px !important;
+	margin: 5px 0 0 5px !important;
+}
+
+table td {
+	font-size: 11px;
+	padding: 9px 10px;
+}
+
+table td:first-child input {
+	height: 10px !important;
+	margin: 5px 0 0 0 !important;
+}
+
+table td .menu a:after {
+	display: none !important;
+}
+
+table td .menu .submenu {
+	padding: 10px;
+}
+
+table .inactive td:not(:last-child) {
+	opacity: 0.2;
+}
+
+table tr td:last-child:not(.secondary-row) {
+	text-align: right;
+}
+
+
+table tr .label {
+	position: relative !important;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+table select {
+	position: relative;
+	font-size: 11px !important;
+	margin-top: 5px;
+	height: 27px;
+	z-index: 100;
+}
+
+table tr .close {
+	font-size: 7px !important;
+	margin-top: 2px;
+	margin-bottom: 3px;
+	padding-top: 6px;
+	padding-right: 1rem;
+}
+
+table tr .close button {
+	position: absolute;
+	color: white;
+	font-weight: bold;
+	font-size: 13px;
+	top: 1.9px;
+	right: 5.5px;
+	border: none !important;
+}
+
+table tr .close button:hover {
+	color: white;
+}
+
+table tr .label.active {
+	background: #D0F7EA;
+	color: #666;
+	border: .5px solid #04CB80;
+}
+
+table.number tr {
+	counter-increment: rowNumber;
+}
+
+table.number tr td:first-child::before {
+	content: counter(rowNumber);
+	min-width: 1em;
+	margin-right: 0.5em;
+}
+
+#clientID {
+	display: inline-block;
+	color: black;
+	font-size: 10px;
+	letter-spacing: 0px;
+	margin-left: 1rem;
+}
+
+#clientID:before {
+	content: "ID: ";
+}
+
+.menu.callout-filter .button {
+	padding: 7px 10px;
+	margin-left: 7px;
+	margin-top: 6px;
+}
+
+.client table tr th:not(:first-child):not(:last-child) {
+	padding-left: 0px;
+}
+
+.client table tr td span.main i {
+	background: #F7C910;
+	font-size: 10px;
+	color: white;
+	padding: 1px 3.5px;
+	margin-right: 6px;
+	border-radius: 50%;
+}
+
+.client table tr td:not(:first-child):not(:last-child) {
+	padding-left: 0px;
+}
+
+.client table tr td:nth-child(1) {
+	width: 200px;
+}
+
+.client table tr td:nth-child(2) {
+	width: 100px;
+}
+
+.client table tr td:nth-child(3) {
+	width: 300px;
+}
+
+.client table tr td:nth-child(4) {
+	width: 100px;
+}
+
+.client table tr td:nth-child(5) {
+	width: 200px;
+}
+
+.tabs-title a {
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px 11px;
+}
+
+.tabs-panel {
+	padding: 0px;
+	margin-bottom: 0px;
+	border: none;
+}
+
+.callout.master-commodities {
+	background: white;
+}
+
+.master-commodities .tabs {
+	margin-top: 2.5rem;
+}
+
+.master-commodities table {
+	margin-bottom: 0px;
+}
+
+/* .callout.data-overview .data-breakdown { margin-top: -3rem; } */
+.callout.data-overview .data-breakdown .tabs {
+	border: none;
+}
+
+.callout.data-overview .data-breakdown .tabs .tabs-title a {
+	padding: 10px 13px;
+}
+
+.callout.data-overview .data-breakdown .tabs li.is-active:after {
+	background: #1779ba;
+}
+
+.callout.data-overview .data-breakdown .tabs li {
+	position: relative;
+	border-bottom: 1px solid #eee;
+}
+
+.callout.data-overview .data-breakdown .tabs li:first-child:after {
+	display: none;
+}
+
+.callout.data-overview .data-breakdown .tabs li:after {
+	content: "";
+	position: absolute;
+	background: #ddd;
+	width: 7px;
+	height: 7px;
+	bottom: -4px;
+	left: 42%;
+	border-radius: 50%;
+}
+
+.callout.data-overview .data-breakdown .tabs-content {
+	padding: 1.5rem 0 0 0;
+	border: none;
+}
+
+.callout.data-overview .data-breakdown .key-data {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.callout.data-overview .data-breakdown .graph-container {
+	text-align: center;
+	padding: 1rem;
+}
+
+.sub-callouts .label {
+	margin-top: 1rem;
+	font-size: 9px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 1px;
+}
+
+.sub-callouts .callout.tba:before {
+	content: "";
+	display: block;
+	background: rgba(255, 255, 255, 0.78);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.sub-callouts .callout.tba:after {
+	content: "TBA";
+	display: block;
+	color: #666;
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-align: center;
+	padding-top: 18%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.sub-callouts .callout.tba .data-wrapper {
+	visibility: hidden;
+}
+
+.sub-callouts #diversionPercentage.h3 {
+	position: relative;
+}
+
+.sub-callouts #diversionPercentage.h3:before {
+	content: "Diversion Percentage";
+	position: absolute;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	bottom: -10px;
+}
+
+.callout::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 7px;
+}
+
+#BOLform form .cell .cell:not(:first-child) {
+	padding-left: 1.5rem;
+}
+
+#BOLform .customer-logo {
+	background-size: 78%;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	width: 178px;
+	height: 100px;
+	margin: 0px auto;
+	border: none;
+}
+
+.callout::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(124, 202, 109, 1);
+	box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+#piechart_year,
+#piechart_1,
+#piechart_2,
+#piechart_3,
+#piechart_4,
+#piechart_5,
+#piechart_6,
+#piechart_7,
+#piechart_8,
+#piechart_9 {
+
+	width: 100% !important;
+	max-width: 600px !important;
+	height: 400px !important;
+	margin: auto !important;
+}
+
+
+#barchart_year,
+#barchart_1,
+#barchart_2,
+#barchart_3,
+#barchart_4,
+#barchart_5,
+#barchart_6,
+#barchart_7,
+#barchart_8,
+#barchart_9 #barchart_10 {
+
+	width: 100% !important;
+	max-width: 1200px !important;
+	/* height: 1300px; */
+	/* margin: auto !important; */
+	margin-left: -1.5rem;
+}
+
+
+.graph-container {
+	/* height: 850px; */
+	/* Fixed height for the graph container */
+	overflow: hidden;
+	/* Prevent overflow */
+}
+
+.tabs-content {
+	min-height: 400px;
+	/* Ensures tabs content doesn't shrink */
+}
+
+#piechart_pie_year path {
+	transition: transform 0.3s ease-in-out;
+}
+
+/* Tabs Disabled  */
+/* Styles for active and enabled tabs */
+.tabs-title:not(.disabled) {
+	color: #1779ba;
+	cursor: pointer;
+}
+
+.tabs-title.disabled {
+	color: gray;
+	cursor: not-allowed;
+	pointer-events: none;
+	background-color: #f0f0f0;
+}
+
+.tabs-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* End  */
+
+
+.tabs-title.is-active {
+	background-color: #ddd !important;
+}
+
+/* .custom-legend {
+	overflow-y: scroll;
+	height: 3.5rem;
+	scrollbar-color: rgba(124, 202, 109, 1); 
+    scrollbar-width: thin;
+} */
+
+.custom-legend::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.custom-legend::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 4px;
+}
+
+.custom-legend::-webkit-scrollbar-thumb {
+	background-color: rgba(124, 202, 109, 1);
+	;
+	border-radius: 4px;
+}
+
+.custom-legend::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(124, 202, 109, 1);
+	box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.no_data {
+	text-align: center;
+	color: red;
+	margin-top: 5rem;
+	font-size: large;
+	font-weight: bold
+}
+
+
+.chart-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.chart-title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: -45px;
+	/* Space between title and chart */
+	z-index: 1;
+	/* Ensure the title stays above the chart */
+	position: relative;
+	/* For z-index to take effect */
+}
+
+.chart {
+	width: 100%;
+	height: 400px;
+	/* Adjust the height as needed */
+	box-sizing: border-box;
+	padding: 0;
+	/* Reduce padding if necessary */
+	background-color: white;
+	/* Ensure chart has a proper background */
+	position: relative;
+	z-index: 0;
+	/* Chart stays below the title */
+}
+
+
+/* Use image as prefix for each commodity dynamically */
+.commodity::before {
+	content: '';
+	display: inline-block;
+	background-image: var(--image-url);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 15px;
+	/* Adjust as needed */
+	height: 15px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+
+	.callout.master-commodities {
+		height: 100wh;
+		overflow-y: scroll;
+	}
+
+	.callout.graphs {
+		height: 32.5rem;
+	}
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	.button-group .button:first-child {
+		margin-right: 3px !important;
+	}
+
+	.button-group .button:last-child {
+		margin-left: 3px !important;
+	}
+}
+
+/* Medium down */
+@media screen and (max-width: 1250px) {
+	body {
+		padding-left: 4.1rem;
+	}
+
+	.side-nav {
+		left: 0px;
+	}
+
+	.side-info {
+		display: none;
+	}
+
+	.grid-container {
+		padding-right: 0.625rem !important;
+		padding-left: 0.3rem;
+	}
+
+	.grid-container.outer {
+		margin: 0px;
+	}
+
+	.top-bar {
+		padding: 0px;
+	}
+
+	.top-bar .menu {
+		text-align: right;
+	}
+
+	.top-bar a {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.callout .previous-month {
+		position: relative;
+	}
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+	.dashboard-filter .menu li:first-child {
+		width: 100%;
+	}
+}
