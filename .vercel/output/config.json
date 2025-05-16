@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "routes": [
+    { "src": "/static/(.*)", "dest": "static/$1" },
+    { "src": "/media/(.*)", "dest": "media/$1" },
+    { "src": "/(.*)", "dest": "Testing_project/wsgi.py" }
+  ]
+}
