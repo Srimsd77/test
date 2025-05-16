@@ -10,8 +10,8 @@
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "staticfiles/$1" },
-    { "src": "/media/(.*)", "dest": "media/$1" },
+    { "src": "/static/(.*)", "dest": ".vercel/output/static/$1" },
+    { "src": "/media/(.*)", "dest": ".vercel/output/media/$1" },
     { "src": "/(.*)", "dest": "Testing_project/wsgi.py" }
   ]
 }
