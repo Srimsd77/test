@@ -10,8 +10,8 @@
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": ".vercel/output/static/$1" },
-    { "src": "/media/(.*)", "dest": ".vercel/output/media/$1" },
+    { "src": "/static/(.*)", "dest": "static/$1" },
+    { "src": "/media/(.*)", "dest": "media/$1" },
     { "src": "/(.*)", "dest": "Testing_project/index.py" }
   ]
 }
